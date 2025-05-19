@@ -1,4 +1,4 @@
-% generateSyntheticSeismicSignal1.m
+% generateSyntheticSeismicSignal.m
 %
 % MATLAB function developed as part of the doctoral thesis:
 % "Lessons Learned from the Survey of Damage to School Buildings by the Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
