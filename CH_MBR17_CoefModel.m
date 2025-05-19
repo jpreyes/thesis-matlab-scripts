@@ -1,4 +1,51 @@
 % CH_MBR17_CoefModel.m - Modelo GMPE depurado basado en Montalva et al. (2017)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FUNCTION: [T, Sa, sig, phi, phiSS, phiS2S, tau] = CH_MBR17_CoefModel(...)
+%
+% SCRIPT NAME: CH_MBR17_CoefModel.m
+%
+% DESCRIPTION:
+%   Computes the spectral acceleration (Sa) and standard deviations using
+%   the GMPE (Ground Motion Prediction Equation) proposed by Montalva et al. (2017),
+%   specifically calibrated for Chilean subduction zones. The function 
+%   distinguishes between interface and intraslab events, and accounts for
+%   depth effects, source-to-site distance, Vs30, and forearc/backarc location.
+%
+%   The coefficient tables must be loaded into the workspace prior to use:
+%     - CH_MBR17_CoefTable.mat (intraslab)
+%     - CH_MBR17_CoefTableInter.mat (interface)
+%
+%   This script was developed as part of the doctoral research:
+%   "Lessons Learned from the Survey of Damage to School Buildings by the 
+%    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%
+% INPUT:
+%   R        - Hypocentral distance [km]
+%   M        - Moment magnitude
+%   I        - Event type (0 = interface, 1 = intraslab)
+%   Zh       - Hypocentral depth [km]
+%   Vs30     - Average shear-wave velocity in top 30 m [m/s]
+%   F_FABA   - Tectonic setting (0 = forearc, 1 = backarc)
+%   epsilon  - Number of standard deviations (for aleatory variability)
+%
+% OUTPUT:
+%   T        - Vector of spectral periods [s]
+%   Sa       - Spectral acceleration [g]
+%   sig      - Total standard deviation
+%   phi      - Intra-event standard deviation
+%   phiSS    - Single-station standard deviation
+%   phiS2S   - Site-to-site variability
+%   tau      - Inter-event standard deviation
+%
+% LICENSE: MIT License – See LICENSE_MIT.txt
+%
+% AUTHOR: Juan Patricio Reyes
+% DATE CREATED: 2025-05-17
+% LAST MODIFIED: 2025-05-19
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 function [T,Sa,sig,phi,phiSS,phiS2S,tau] = CH_MBR17_CoefModel(R,M,I,Zh,Vs30,F_FABA,epsilon)
 
 % Cargar tabla de coeficientes (matriz coef_table debe estar en workspace)
