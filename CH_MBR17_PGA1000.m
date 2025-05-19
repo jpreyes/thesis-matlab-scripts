@@ -1,3 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FUNCTION: PGA1000 = CH_MBR17_PGA1000(R, M, I, Zh, F_FABA)
+%
+% SCRIPT NAME: CH_MBR17_PGA1000.m
+%
+% DESCRIPTION:
+%   Computes the spectral acceleration at T = 0.01 s (PGA equivalent)
+%   assuming a reference shear-wave velocity of Vs30 = 1000 m/s, based on
+%   the GMPE model of Montalva et al. (2017) for Chilean subduction earthquakes.
+%   This function is used to estimate site amplification in cases where 
+%   Vs30 is below the linear threshold (vlin), following a two-stage approach.
+%
+%   The function loads the appropriate coefficient set depending on whether 
+%   the event is classified as interface or intraslab.
+%
+%   This subroutine supports the full CH-MBR17 ground motion prediction
+%   framework, and is called internally by CH_MBR17_CoefModel.
+%
+%   Developed as part of the doctoral thesis:
+%   "Lessons Learned from the Survey of Damage to School Buildings by the 
+%    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%
+% INPUT:
+%   R        - Source-to-site distance [km]
+%   M        - Moment magnitude
+%   I        - Event type (0 = interface, 1 = intraslab)
+%   Zh       - Hypocentral depth [km]
+%   F_FABA   - Tectonic region indicator (0 = forearc, 1 = backarc)
+%
+% OUTPUT:
+%   PGA1000  - Pseudo-acceleration [g] at T = 0.01 s for Vs30 = 1000 m/s
+%
+% DEPENDENCIES:
+%   Requires coefficient tables:
+%   - CH_MBR17_CoefTable.mat (intraslab)
+%   - CH_MBR17_CoefTableInter.mat (interface)
+%
+% LICENSE: MIT License – See LICENSE_MIT.txt
+%
+% AUTHOR: Juan Patricio Reyes
+% DATE CREATED: 2025-05-17
+% LAST MODIFIED: 2025-05-19
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CH_MBR17_PGA1000.m - Calcula PGA (Sa en T=0.01s) con Vs30=1000 m/s
 function PGA1000 = CH_MBR17_PGA1000(R, M, I, Zh, F_FABA)
 
