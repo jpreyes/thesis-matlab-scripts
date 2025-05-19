@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FUNCTION: [fitresult, gof] = createFit(Rhyp, ln_SA)
+% FUNCTION: [fitresult, gof] = GMPEFit(Rhyp, ln_SA)
 %
 % SCRIPT NAME: createFit.m
 %
@@ -33,7 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%function [fitresult, gof] = createFit(Rhyp, ln_SA)
+%function [fitresult, gof] = GMPEFit(Rhyp, ln_SA)
 %CREATEFIT(RHYP,LN_SA)
 %  Create a fit.
 %
