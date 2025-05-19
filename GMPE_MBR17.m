@@ -1,17 +1,48 @@
-% GMPE_MBR17.m - Script principal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FUNCTION: [Sa, T, errFlag, sig, phi, phiSS, phiS2S, tau] = GMPE_MBR17(...)
+%
+% SCRIPT NAME: GMPE_MBR17.m
+%
+% DESCRIPTION:
+%   Computes spectral acceleration values (Sa) using the Ground Motion 
+%   Prediction Equation (GMPE) proposed by Montalva et al. (2017), calibrated 
+%   for Chilean subduction interface and intraslab events. 
+%   The implementation supports scalar and vector inputs for distance, 
+%   magnitude, and period, and performs log-log interpolation of spectral values.
+%
+%   This script was developed as part of the doctoral thesis:
+%   "Lessons Learned from the Survey of Damage to School Buildings by the 
+%    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%
+% AUTHOR: Juan Patricio Reyes
+% SUPERVISORS: Dr. Galo Valdebenito, Dr. Francisco López-Almansa
+% DATE CREATED: 2024-12-10
+% LAST MODIFIED: 2025-04-28
+%
+% INPUT:
+%   R        - Source-to-site distance [km] (scalar or vector)
+%   M        - Moment magnitude (scalar or vector)
+%   I        - Event type: 0 = interface, 1 = intraslab
+%   Zh       - Hypocentral depth [km]
+%   Vs30     - Average shear-wave velocity of top 30 m [m/s]
+%   F_FABA   - Forearc/backarc flag: 0 = forearc, 1 = backarc
+%   epsilon  - Number of standard deviations (typically 0)
+%   per      - Period vector [s]
+%
+% OUTPUT:
+%   Sa       - Spectral acceleration [g]
+%   T        - Periods [s]
+%   errFlag  - Error flag (0 = OK, -1 = invalid input combination)
+%   sig      - Total standard deviation
+%   phi      - Intra-event variability
+%   phiSS    - Site-to-site variability
+%   phiS2S   - Inter-site variability
+%   tau      - Inter-event variability
+%
+% LICENSE: MIT License – See LICENSE_MIT.txt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [Sa, T, errFlag, sig, phi, phiSS, phiS2S, tau] = GMPE_MBR17(R, M, I, Zh, Vs30, F_FABA, epsilon, per)
-% R        = distancia (puede ser escalar o vector)
-% M        = magnitud (puede ser escalar o vector)
-% I        = tipo de evento (1=intraslab, 0=interface)
-% Zh       = profundidad hipocentral
-% Vs30     = velocidad de la onda de corte promedio de los 30m
-% F_FABA   = forearc/backarc (0=forearc, 1=backarc)
-% epsilon  = desviaciones estándar
-% per      = vector de periodos (s)
 
-% Carga de coeficientes embebidos 
-% Extraído de Montalva et al., (2017)
-% Cada fila representa un periodo, columnas: [T, c4, C1, DC1, n, c, vlin, b, theta(1-16), phi, tau, sigma, phiS2S]
 %load('CH_MBR17_CoefTable.mat', 'coef_table'); % asegurarse que coef_table esté en el entorno
 
 errFlag = 0;
