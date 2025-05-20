@@ -16,3 +16,16 @@ The main MATLAB scripts developed for ground motion modeling, spectral accelerat
 
 All scripts are distributed under the **MIT License**.  
 The repository also includes example datasets, coefficient tables, and plotting routines for visualization and model comparison.
+
+├── GMPE/
+│   ├── GMPE_MBR17.m
+│   ├── CH_MBR17_CoefModel.m
+│   └── ...
+├── SignalAnalysis/
+│   ├── signal_analysis_roof_directions.m
+│   └── generateSyntheticSeismicSignal1.m
+├── Models/
+│   ├── Illapel_RC_Model_ETABS.s2k
+│   ├── Illapel_RC_Model_Readme.md
+│   └── ...
+└── README.md
