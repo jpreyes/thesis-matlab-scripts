@@ -5,7 +5,7 @@
 % Author: Juan Patricio Reyes Cancino
 % Doctoral Program in Earthquake Engineering and Structural Dynamics
 % Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
-% Date: [Insert Date] – Version 1.0
+% Date: june, 2025 – Version 1.0
 %
 % DESCRIPTION:
 % generateSyntheticSeismicSignal generates a synthetic seismic signal with a rising envelope
@@ -52,3 +52,4 @@ legend('Signal + Noise');
 
 
 end
+
