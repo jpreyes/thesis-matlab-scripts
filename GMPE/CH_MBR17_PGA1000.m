@@ -19,6 +19,11 @@
 %   Developed as part of the doctoral thesis:
 %   "Lessons Learned from the Survey of Damage to School Buildings by the 
 %    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%    Author: Juan Patricio Reyes Cancino
+%    Doctoral Program in Earthquake Engineering and Structural Dynamics
+%    Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
+%
+% DESCRIPTION:
 %
 % INPUT:
 %   R        - Source-to-site distance [km]
