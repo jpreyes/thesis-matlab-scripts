@@ -5,7 +5,7 @@
 % Author: Juan Patricio Reyes Cancino
 % Doctoral Program in Earthquake Engineering and Structural Dynamics
 % Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
-% Date: [Insert Date] – Version 1.0
+% Date: june, 2025 – Version 1.0
 %
 % DESCRIPTION:
 % This function generates a synthetic seismic acceleration signal with a Gaussian-modulated 
@@ -75,3 +75,4 @@ ylabel('Acceleration [m/s²]');
 title(['Synthetic Seismic Signal – Pulse Envelope (Peak at ', num2str(peak_fraction * 100), '%)']);
 legend('Signal + Noise');
 end
+
