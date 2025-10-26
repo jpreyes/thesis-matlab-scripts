@@ -1,11 +1,11 @@
-
 % signal_analysis_roof_directions_commented.m
 %
-% This script was developed as part of the doctoral thesis:
+% MATLAB function developed as part of the doctoral thesis:
 % "Lessons Learned from the Survey of Damage to School Buildings by the Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
 % Author: Juan Patricio Reyes Cancino
-% PhD Program in Earthquake Engineering and Structural Dynamics
-% UPC – Universidad Austral de Chile
+% Doctoral Program in Earthquake Engineering and Structural Dynamics
+% Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
+% Date: june, 2025 – Version 1.0
 %
 % DESCRIPTION:
 % This script reads acceleration response signals measured at the roof level of a school building
