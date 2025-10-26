@@ -13,11 +13,11 @@
 %   This script was developed as part of the doctoral thesis:
 %   "Lessons Learned from the Survey of Damage to School Buildings by the 
 %    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%    Author: Juan Patricio Reyes Cancino
+%    Doctoral Program in Earthquake Engineering and Structural Dynamics
+%    Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
 %
-% AUTHOR: Juan Patricio Reyes
-% SUPERVISORS: Dr. Galo Valdebenito, Dr. Francisco López-Almansa
-% DATE CREATED: 2024-12-10
-% LAST MODIFIED: 2025-04-28
+% DESCRIPTION:
 %
 % INPUT:
 %   R        - Source-to-site distance [km] (scalar or vector)
@@ -38,6 +38,11 @@
 %   phiSS    - Site-to-site variability
 %   phiS2S   - Inter-site variability
 %   tau      - Inter-event variability
+%
+%
+% AUTHOR: Juan Patricio Reyes
+% DATE CREATED: 2024-12-10
+% LAST MODIFIED: 2025-04-28
 %
 % LICENSE: MIT License – See LICENSE_MIT.txt
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
