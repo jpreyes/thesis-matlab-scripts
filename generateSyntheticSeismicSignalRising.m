@@ -1,4 +1,13 @@
-function generateSyntheticSeismicSignal(filename, duration, a_max, f_dom, zeta, fs, noise_level)
+%generateSyntheticSeismicSignalRising.m
+%
+% MATLAB function developed as part of the doctoral thesis:
+% "Lessons Learned from the Survey of Damage to School Buildings by the Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+% Author: Juan Patricio Reyes Cancino
+% Doctoral Program in Earthquake Engineering and Structural Dynamics
+% Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
+% Date: [Insert Date] – Version 1.0
+%
+% DESCRIPTION:
 % generateSyntheticSeismicSignal generates a synthetic seismic signal with a rising envelope
 %
 % INPUT PARAMETERS:
@@ -9,6 +18,7 @@ function generateSyntheticSeismicSignal(filename, duration, a_max, f_dom, zeta, 
 % - zeta: damping ratio (e.g. 0.05 to 0.3)
 % - fs: sampling frequency [Hz]
 % - noise_level: noise amplitude as a fraction of a_max (0 to 1)
+function generateSyntheticSeismicSignal(filename, duration, a_max, f_dom, zeta, fs, noise_level)
 
 % Time vector
 dt = 1/fs;
@@ -39,5 +49,6 @@ xlabel('Time [s]');
 ylabel('Acceleration [m/s²]');
 title('Synthetic Seismic Signal with Rising Envelope and Noise');
 legend('Signal + Noise');
+
 
 end
