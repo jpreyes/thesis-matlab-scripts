@@ -12,6 +12,9 @@
 %   This fitting procedure was developed as part of the doctoral research:
 %   "Lessons Learned from the Survey of Damage to School Buildings by the 
 %    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%    Author: Juan Patricio Reyes Cancino
+%    Doctoral Program in Earthquake Engineering and Structural Dynamics
+%    Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
 %
 % INPUT:
 %   Rhyp   - Hypocentral distance [km] (vector)
@@ -448,5 +451,6 @@ legend( h, 'Spline Fit - residuals', 'Zero Line', 'Location', 'NorthEast', 'Inte
 xlabel( 'Rhyp', 'Interpreter', 'none' );
 ylabel( 'ln_SA', 'Interpreter', 'none' );
 grid on
+
 
 
