@@ -15,9 +15,14 @@
 %     - CH_MBR17_CoefTable.mat (intraslab)
 %     - CH_MBR17_CoefTableInter.mat (interface)
 %
-%   This script was developed as part of the doctoral research:
+%   This script was developed  as part of the doctoral research:
 %   "Lessons Learned from the Survey of Damage to School Buildings by the 
 %    Mw = 8.4 Illapel Earthquake (Chile, September 2015)"
+%    Author: Juan Patricio Reyes Cancino
+%    Doctoral Program in Earthquake Engineering and Structural Dynamics
+%    Universitat Politècnica de Catalunya (UPC) – Universidad Austral de Chile (UACh)
+%
+% DESCRIPTION:
 %
 % INPUT:
 %   R        - Hypocentral distance [km]
